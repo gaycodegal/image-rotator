@@ -22,3 +22,11 @@ optional arguments:
   --magnitude MAGNITUDE
                         amount to rotate, warning, advanced
 ```
+
+## installation
+
+May require you to install PIL.
+
+Do that with `pip3 install pillow` or `python3 -m pip install pillow`.
+
+May require you to install pip via `sudo apt install python3-pip`.
