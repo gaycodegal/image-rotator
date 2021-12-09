@@ -7,7 +7,7 @@ import argparse
 def str2bool(v):
     if isinstance(v, bool):
         return v
-    if v == '':
+    if v == '' or v == None:
         return True
     if v.lower() in ('yes', 'true', 't', 'y', '1'):
         return True
@@ -65,8 +65,7 @@ def unshiftY(data, width, height, shift):
 
 # use --undo or -u instead of negative numberse
 mag = abs(args.magnitude)
-
-if (args.undo):
+if args.undo is not False:
     unshiftY(pixels, im.width, im.height, mag)
     unshiftX(pixels, im.width, im.height, mag)
 else:
